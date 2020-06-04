@@ -2,7 +2,6 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainActivity" >
@@ -70,7 +69,7 @@
                 android:layout_height="380dp">
 
                 <TextView
-                    android:id="@+id/textView"
+                    android:id="@+id/oftenList"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="8dp"
@@ -278,7 +277,7 @@
     </ScrollView>
 
     <androidx.constraintlayout.widget.ConstraintLayout
-        android:id="@+id/main_fav"
+        android:id="@+id/music_bottom_fav"
         android:layout_width="match_parent"
         android:layout_height="50dp"
         android:background="#F3DEBF"
@@ -286,28 +285,45 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent">
 
-        <ImageView
-            android:id="@+id/imageView13"
+        <TextView
+            android:id="@+id/music_bottom_iv_title"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginEnd="10dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginBottom="20dp"
+            android:text="History"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toStartOf="@+id/imageView2"
+            app:layout_constraintStart_toEndOf="@+id/music_bottom_iv_icon"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/music_bottom_iv_last"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="17dp"
+            android:layout_marginBottom="10dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/music_bottom_iv_play"
             app:layout_constraintTop_toTopOf="parent"
             app:srcCompat="@android:drawable/ic_media_previous" />
 
         <ImageView
-            android:id="@+id/imageView3"
+            android:id="@+id/music_bottom_iv_next"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="10dp"
+            android:layout_marginStart="14dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="14dp"
+            android:layout_marginBottom="10dp"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintStart_toEndOf="@+id/imageView2"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/music_bottom_iv_play"
             app:layout_constraintTop_toTopOf="parent"
             app:srcCompat="@android:drawable/ic_media_next" />
 
         <ImageView
-            android:id="@+id/imageView2"
+            android:id="@+id/music_bottom_iv_play"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginEnd="60dp"
@@ -317,27 +333,16 @@
             app:srcCompat="@android:drawable/ic_media_play" />
 
         <TextView
-            android:id="@+id/textView12"
+            android:id="@+id/music_bottom_iv_singer"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="15dp"
-            android:layout_marginTop="5dp"
+            android:layout_marginStart="20dp"
             android:text="88rising/Rich Brian"
-            app:layout_constraintStart_toEndOf="@+id/imageView12"
-            app:layout_constraintTop_toBottomOf="@+id/textView11" />
-
-        <TextView
-            android:id="@+id/textView11"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="62dp"
-            android:layout_marginTop="5dp"
-            android:text="History"
-            app:layout_constraintStart_toStartOf="@+id/imageView12"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintStart_toEndOf="@+id/music_bottom_iv_icon"
+            app:layout_constraintTop_toBottomOf="@+id/music_bottom_iv_title" />
 
         <ImageView
-            android:id="@+id/imageView12"
+            android:id="@+id/music_bottom_iv_icon"
             android:layout_width="45dp"
             android:layout_height="45dp"
             android:layout_marginStart="25dp"
