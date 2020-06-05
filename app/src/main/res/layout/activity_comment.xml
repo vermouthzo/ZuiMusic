@@ -22,6 +22,7 @@
             app:layout_constraintStart_toStartOf="parent">
 
             <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/back"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
 
@@ -83,7 +84,7 @@
         app:layout_constraintTop_toTopOf="parent">
 
         <ImageView
-            android:id="@+id/imageView8"
+            android:id="@+id/back_play"
             android:layout_width="40dp"
             android:layout_height="40dp"
             android:layout_marginStart="4dp"
@@ -95,12 +96,12 @@
         <TextView
             android:id="@+id/textView"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="12dp"
-            android:layout_marginTop="8dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="4dp"
             android:text="评论"
-            android:textSize="24sp"
-            app:layout_constraintStart_toEndOf="@+id/imageView8"
+            android:textSize="26sp"
+            app:layout_constraintStart_toEndOf="@+id/back_play"
             app:layout_constraintTop_toTopOf="parent" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 
