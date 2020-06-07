@@ -6,51 +6,54 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".MainActivity">
 
-    <ScrollView
-        android:layout_width="412dp"
-        android:layout_height="711dp"
-        app:layout_constraintBottom_toTopOf="@+id/main_fav"
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/main_search"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
+        <EditText
+            android:id="@+id/edit_text"
+            android:layout_width="300dp"
+            android:layout_height="50dp"
+            android:hint="在此输入歌名"
+            android:maxLines="1"
+            android:singleLine="true"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.111"
+            app:layout_constraintStart_toEndOf="@+id/imageView"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="4dp"
+            android:layout_marginTop="4dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="?android:attr/actionModeWebSearchDrawable" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <ScrollView
+        android:layout_width="412dp"
+        android:layout_height="711dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/main_search">
+
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="400dp"
             android:orientation="vertical">
-
-            <androidx.constraintlayout.widget.ConstraintLayout
-                android:id="@+id/main_search"
-                android:layout_width="match_parent"
-                android:layout_height="80dp">
-
-                <EditText
-                    android:id="@+id/edit_text"
-                    android:layout_width="300dp"
-                    android:layout_height="50dp"
-                    android:maxLines="1"
-                    android:text="在此输入歌名"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent" />
-
-                <ImageView
-                    android:id="@+id/imageView"
-                    android:layout_width="35dp"
-                    android:layout_height="35dp"
-                    android:layout_marginStart="16dp"
-                    android:layout_marginTop="20dp"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent"
-                    app:srcCompat="?android:attr/actionModeWebSearchDrawable" />
-
-            </androidx.constraintlayout.widget.ConstraintLayout>
 
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:id="@+id/main_pictrues"
                 android:layout_width="match_parent"
-                android:layout_height="180dp">
+                android:layout_height="166dp">
 
                 <ImageView
                     android:id="@+id/imageView4"
@@ -60,13 +63,14 @@
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent"
-                    app:srcCompat="@mipmap/ic_launcher" />
+                    app:layout_constraintVertical_bias="0.407"
+                    app:srcCompat="@drawable/logo" />
             </androidx.constraintlayout.widget.ConstraintLayout>
 
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:id="@+id/main_list"
                 android:layout_width="match_parent"
-                android:layout_height="380dp">
+                android:layout_height="310dp">
 
                 <TextView
                     android:id="@+id/oftenList"
@@ -213,7 +217,7 @@
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:id="@+id/main_often"
                 android:layout_width="match_parent"
-                android:layout_height="200dp">
+                android:layout_height="233dp">
 
                 <TextView
                     android:id="@+id/textView8"

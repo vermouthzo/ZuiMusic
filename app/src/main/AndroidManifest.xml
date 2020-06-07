@@ -15,18 +15,21 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity android:name=".SonglistActivity"></activity>
-        <activity android:name=".MainActivity">
-        </activity>
-        <activity android:name=".CommentActivity">
+        <activity android:name=".MainActivity" android:windowSoftInputMode="adjustPan">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".CommentActivity" android:windowSoftInputMode="adjustResize" >
+
+        </activity>
         <activity android:name=".PlayActivity">
         </activity>
-        <activity android:name=".LoginActivity"></activity>
+        <activity android:name=".LoginActivity">
+
+        </activity>
         <activity android:name=".RegisterActivity"></activity>
     </application>
 
