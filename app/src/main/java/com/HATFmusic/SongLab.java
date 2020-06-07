@@ -25,7 +25,7 @@ public class SongLab {
     public final static int MSG_FAILURE = -1;
     private static SongLab INSTANCE = null;
 
-    //TODO 未实现单例模式，可能会是实现多例模式
+    // 未实现单例模式，可能会是实现多例模式
     private SongLab() {
         //初始化空白列表
         data = new ArrayList<>();
