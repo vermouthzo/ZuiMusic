@@ -53,7 +53,7 @@ public class SongLab {
      * @param position 频道的序号
      * @return 歌曲对象Song
      */
-    public Song getChannel(int position) {
+    public Song getSong(int position) {
         return this.data.get(position);
     }
 

@@ -32,7 +32,7 @@ public class SongRvAdapter extends RecyclerView.Adapter<SongRvAdapter.SongRowHol
     public SongRvAdapter.SongRowHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         View rowView = LayoutInflater
                 .from(parent.getContext())
-                .inflate(R.layout.activity_songlist, parent, false);
+                .inflate(R.layout.song_row, parent, false);
         SongRowHolder holder = new SongRowHolder(rowView);
         return holder;
     }
@@ -45,7 +45,7 @@ public class SongRvAdapter extends RecyclerView.Adapter<SongRvAdapter.SongRowHol
      */
     @Override
     public void onBindViewHolder(@NonNull SongRowHolder holder, int position) {
-        Song c = lab.getChannel(position);
+        Song c = lab.getSong(position);
         holder.bind(c);
     }
 
@@ -67,15 +67,15 @@ public class SongRvAdapter extends RecyclerView.Adapter<SongRvAdapter.SongRowHol
      * 单行布局对应得Java控制类
      */
     public class SongRowHolder extends RecyclerView.ViewHolder {
-        private TextView title; //频道标题
-        private TextView quality;
+        private TextView songname; //频道标题
+        private TextView auther;
         private ImageView cover;
 
         public SongRowHolder(@NonNull View row) {
             super(row);
-            this.title = row.findViewById(R.id.channel_title);
-            this.quality = row.findViewById(R.id.channel_quality);
-            this.cover = row.findViewById(R.id.channel_cover);
+            this.songname = row.findViewById(R.id.song_name);
+            this.auther = row.findViewById(R.id.auther);
+            this.cover = row.findViewById(R.id.song_cover);
             row.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
@@ -94,8 +94,8 @@ public class SongRvAdapter extends RecyclerView.Adapter<SongRvAdapter.SongRowHol
          * @param c
          */
         public void bind(Song c) {
-            this.title.setText(c.getSongname());
-            this.quality.setText(c.getAuther());
+            this.songname.setText(c.getSongname());
+            this.auther.setText(c.getAuther());
 
             //图片圆角处理
             RoundedCorners rc = new RoundedCorners(50);

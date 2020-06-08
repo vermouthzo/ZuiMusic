@@ -44,7 +44,7 @@
                     app:srcCompat="@drawable/ic_keyboard_arrow_right_black_24dp" />
 
                 <ImageView
-                    android:id="@+id/channel_cover"
+                    android:id="@+id/song_cover"
                     android:layout_width="120dp"
                     android:layout_height="120dp"
                     android:layout_marginStart="16dp"
@@ -56,7 +56,7 @@
                     app:srcCompat="@drawable/comment_pic" />
 
                 <TextView
-                    android:id="@+id/channel_title"
+                    android:id="@+id/song_name"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="8dp"
@@ -64,11 +64,11 @@
                     android:text="TextView"
                     android:textSize="18sp"
                     android:textStyle="bold"
-                    app:layout_constraintStart_toEndOf="@+id/channel_cover"
-                    app:layout_constraintTop_toTopOf="@+id/channel_cover" />
+                    app:layout_constraintStart_toEndOf="@+id/song_cover"
+                    app:layout_constraintTop_toTopOf="@+id/song_cover" />
 
                 <TextView
-                    android:id="@+id/channel_quality"
+                    android:id="@+id/auther"
                     android:layout_width="51dp"
                     android:layout_height="18dp"
                     android:layout_marginStart="8dp"
@@ -76,8 +76,8 @@
                     android:text="TextView"
                     android:textColor="#716060"
                     android:textSize="12sp"
-                    app:layout_constraintStart_toEndOf="@+id/channel_cover"
-                    app:layout_constraintTop_toBottomOf="@+id/channel_title" />
+                    app:layout_constraintStart_toEndOf="@+id/song_cover"
+                    app:layout_constraintTop_toBottomOf="@+id/song_name" />
             </androidx.constraintlayout.widget.ConstraintLayout>
         </com.google.android.material.card.MaterialCardView>
 

@@ -13,7 +13,7 @@ import android.widget.TextView;
 import androidx.appcompat.app.AppCompatActivity;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener{
-    ImageView lastIv,playIv,nextIv,iconIv;
+    ImageView lastIv,playIv,nextIv,iconIv ,music_bottom_iv_icon;
     TextView singerIv,titleIv;
     //数据源
     //list
@@ -72,4 +72,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         //把主线程的handler传递给子线程使用
         lab.getData(handler);
     }
+
+
 }

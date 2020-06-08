@@ -28,7 +28,7 @@ android {
 
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
-
+    implementation 'com.github.iammert:MusicPlayerView:e3b937c729'
     implementation 'com.google.android.exoplayer:exoplayer:2.9.4'
     implementation 'com.google.android.material:material:1.1.0'
     implementation 'androidx.appcompat:appcompat:1.1.0'
