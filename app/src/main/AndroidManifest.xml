@@ -15,7 +15,11 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".SonglistActivity" >
+        <activity android:name=".LocalmusicActivity"></activity>
+        <activity android:name=".SonglistActivity"></activity>
+        <activity
+            android:name=".MainActivity"
+            android:windowSoftInputMode="adjustPan">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -23,15 +27,10 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".MainActivity"
-            android:windowSoftInputMode="adjustPan"></activity>
-        <activity
             android:name=".CommentActivity"
-            android:windowSoftInputMode="adjustResize"></activity>
-        <activity android:name=".PlayActivity">
-
-        </activity>
-        <activity android:name=".LoginActivity"></activity>
+            android:windowSoftInputMode="adjustResize" />
+        <activity android:name=".PlayActivity"></activity>
+        <activity android:name=".LoginActivity" />
         <activity android:name=".RegisterActivity" />
     </application>
 

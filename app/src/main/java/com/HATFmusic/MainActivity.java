@@ -64,12 +64,13 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         lastIv.setOnClickListener(this);
         playIv.setOnClickListener(this);
 
+        songList1.setOnClickListener(v -> {
+            Intent intent = new Intent(MainActivity.this, SonglistActivity.class);
+            MainActivity.this.startActivity(intent);
+        });
 
     }
-    public void onButtonClick(View v){
-        Intent intent = new Intent(MainActivity.this,SonglistActivity.class);
-        startActivity(intent);
-    }
+
     @Override
     public void onClick(View view) {
         switch (view.getId()){

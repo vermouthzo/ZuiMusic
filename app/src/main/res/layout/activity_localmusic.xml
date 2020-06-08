@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".LocalmusicActivity">
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="70dp"
+    android:layout_alignParentBottom="true"
+    android:id="@+id/localmusic_bottom"
+    android:background="#EEEEEE">
+
+
+    <ImageView
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        app:srcCompat="@drawable/album8"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="10dp"
+        android:id="@+id/localmusic_bottom_icon"/>
+    <TextView
+        android:id="@+id/localmusic_bottom_song"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="History"
+        android:layout_toRightOf="@id/localmusic_bottom_icon"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="10dp"
+        android:textStyle="bold"
+        android:textSize="16sp"/>
+    <TextView
+        android:id="@+id/localmusic_bottom_singer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="88rising/Rich Brian"
+        android:textSize="12sp"
+        android:layout_below="@+id/localmusic_bottom_song"
+        android:layout_alignLeft="@+id/localmusic_bottom_song"
+        android:layout_marginTop="10dp"/>
+
+    <ImageView
+        android:id="@+id/local_music_next"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="20dp"
+        app:srcCompat="@android:drawable/ic_media_next" />
+
+    <ImageView
+        android:id="@+id/local_music_play"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_toLeftOf="@id/local_music_next"
+        android:layout_marginRight="20dp"
+        app:srcCompat="@drawable/exo_controls_play" />
+
+    <ImageView
+        android:id="@+id/local_music_last"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_toLeftOf="@id/local_music_play"
+        android:layout_marginRight="20dp"
+        app:srcCompat="@drawable/exo_controls_previous" />
+
+    </RelativeLayout>
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/local_music_rv"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/localmusic_bottom"/>
+
+</RelativeLayout>
