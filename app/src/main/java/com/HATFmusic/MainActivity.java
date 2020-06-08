@@ -1,7 +1,9 @@
 package com.HATFmusic;
+import android.content.Intent;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
@@ -11,12 +13,15 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.RecyclerView;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener{
-    ImageView lastIv,playIv,nextIv,iconIv ,music_bottom_iv_icon;
+
+    ImageView lastIv,playIv,nextIv,iconIv,songList1,songList2,songList3,songList4,songList5,songList6;
+
+
     TextView singerIv,titleIv;
-    //数据源
-    //list
+    RecyclerView musicRv;
 
     private SongLab lab = SongLab.getInstance();
     private SongRvAdapter rvAdapter;
@@ -35,6 +40,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         initView();
+        //Datas = new ArrayList<>()
     }
 
     private void initView() {
@@ -45,12 +51,25 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         iconIv=findViewById(R.id.music_bottom_iv_icon);
         singerIv=findViewById(R.id.music_bottom_iv_singer);
         titleIv=findViewById(R.id.music_bottom_iv_title);
+        musicRv=findViewById(R.id.music_bottom_fav);
+        songList1=findViewById(R.id.songList1);
+        songList2=findViewById(R.id.songList2);
+        songList3=findViewById(R.id.songList3);
+        songList4=findViewById(R.id.songList4);
+        songList5=findViewById(R.id.songList5);
+        songList6=findViewById(R.id.songList6);
+
 
         nextIv.setOnClickListener(this);
         lastIv.setOnClickListener(this);
         playIv.setOnClickListener(this);
-    }
 
+
+    }
+    public void onButtonClick(View v){
+        Intent intent = new Intent(MainActivity.this,SonglistActivity.class);
+        startActivity(intent);
+    }
     @Override
     public void onClick(View view) {
         switch (view.getId()){
