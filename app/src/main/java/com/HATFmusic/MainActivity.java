@@ -13,34 +13,24 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.recyclerview.widget.RecyclerView;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener{
 
-    ImageView lastIv,playIv,nextIv,iconIv,songList1,songList2,songList3,songList4,songList5,songList6;
+    private ImageView lastIv,playIv,nextIv,iconIv,songList1,songList2,songList3,songList4,songList5,songList6;
 
 
-    TextView singerIv,titleIv;
-    RecyclerView musicRv;
+    private TextView singerIv,titleIv;
+    private ConstraintLayout musicRv;
 
     private SongLab lab = SongLab.getInstance();
     private SongRvAdapter rvAdapter;
-    private Handler handler = new Handler() {
-        //按快捷键Ctrl o
-        @Override
-        public void handleMessage(@NonNull Message msg) {
-            if (msg.what == 1) {
-                rvAdapter.notifyDataSetChanged();
-            }
-        }
-    };
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         initView();
-        //Datas = new ArrayList<>()
     }
 
     private void initView() {
@@ -69,6 +59,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             MainActivity.this.startActivity(intent);
         });
 
+
     }
 
     @Override
@@ -85,13 +76,5 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 break;
         }
     }
-
-    @Override
-    protected void onResume() {
-        super.onResume();
-        //把主线程的handler传递给子线程使用
-        lab.getData(handler);
-    }
-
 
 }

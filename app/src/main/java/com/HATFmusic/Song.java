@@ -11,6 +11,23 @@ public class Song implements Serializable {
     private long size; //歌曲的大小
     private String path; //歌曲的地址
 
+    public Song() {
+    }
+
+    public Song(String id, String auther, String songname, String cover, int duration, long size, String path) {
+        this.id = id;
+        this.auther = auther;
+        this.songname = songname;
+        this.cover = cover;
+        this.duration = duration;
+        this.size = size;
+        this.path = path;
+    }
+
+    public String getCover() {
+        return cover;
+    }
+
     public String getId() {
         return id;
     }
@@ -35,9 +52,6 @@ public class Song implements Serializable {
         this.songname = songname;
     }
 
-    public String getCover() {
-        return cover;
-    }
 
     public void setCover(String cover) {
         this.cover = cover;
@@ -79,4 +93,5 @@ public class Song implements Serializable {
                 ", path='" + path + '\'' +
                 '}';
     }
+
 }

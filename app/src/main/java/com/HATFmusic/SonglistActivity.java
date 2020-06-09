@@ -33,6 +33,7 @@ public class SonglistActivity extends AppCompatActivity {
         rvAdapter = new SongRvAdapter(this, p -> {
             //跳转到新界面，使用意图Intent
             Intent intent = new Intent(SonglistActivity.this, PlayActivity.class);
+
             //通过位置p得到当前歌曲song
             Song c = lab.getSong(p);
             intent.putExtra("song", c);

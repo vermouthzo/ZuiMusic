@@ -54,7 +54,7 @@ public class SongRvAdapter extends RecyclerView.Adapter<SongRvAdapter.SongRowHol
         public void onSongClick(int position);
     }
     /**
-     * 用于确定列表总共有几行（即多少个ChannelRowHolder对象）
+     * 用于确定列表总共有几行（即多少个SongRowHolder对象）
      *
      * @return
      */
@@ -67,15 +67,16 @@ public class SongRvAdapter extends RecyclerView.Adapter<SongRvAdapter.SongRowHol
      * 单行布局对应得Java控制类
      */
     public class SongRowHolder extends RecyclerView.ViewHolder {
-        private TextView songname; //频道标题
-        private TextView auther;
-        private ImageView cover;
+        private TextView songname; //歌曲名称
+        private TextView auther;   //作者
+        private ImageView cover, iv_cover;   //封面图片
 
         public SongRowHolder(@NonNull View row) {
             super(row);
             this.songname = row.findViewById(R.id.song_name);
             this.auther = row.findViewById(R.id.auther);
             this.cover = row.findViewById(R.id.song_cover);
+            this.iv_cover = row.findViewById(R.id.iv_cover);
             row.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
@@ -98,7 +99,7 @@ public class SongRvAdapter extends RecyclerView.Adapter<SongRvAdapter.SongRowHol
             this.auther.setText(c.getAuther());
 
             //图片圆角处理
-            RoundedCorners rc = new RoundedCorners(50);
+            RoundedCorners rc = new RoundedCorners(150);
             RequestOptions ro = RequestOptions.bitmapTransform(rc)
                     .override(300, 300);
 

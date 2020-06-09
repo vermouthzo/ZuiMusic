@@ -58,7 +58,7 @@ public class SongLab {
     }
 
     /**
-     * 访问网络得到真实数据，代替以前的test()方法
+     * 访问网络得到真实数据。
      */
     public void getData(final Handler handler) {
         Retrofit retrofit = RetrofitClient.getInstance();

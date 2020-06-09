@@ -10,72 +10,90 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:background="#DDDFFF"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0">
+        app:layout_constraintTop_toTopOf="parent">
 
-        <co.mobiwise.library.MusicPlayerView
-            android:id="@+id/mpv"
-            android:layout_width="300dp"
-            android:layout_height="300dp"
-            android:layout_marginTop="130dp"
-            app:buttonColor="#FF0028"
-            app:cover="@drawable/album1"
+        <TextView
+            android:id="@+id/tv_total"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="100dp"
+            android:text="04:50"
+            android:textColor="#fff"
+            android:textSize="20sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/sb"
+            app:layout_constraintTop_toBottomOf="@+id/iv_cover" />
+
+        <TextView
+            android:id="@+id/tv_progress"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="100dp"
+            android:text="00:00"
+            android:textColor="#fff"
+            android:textSize="20sp"
+            app:layout_constraintEnd_toStartOf="@+id/sb"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/iv_cover" />
+
+        <ImageView
+            android:id="@+id/btn_play"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="36dp"
+            android:layout_marginBottom="124dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/next_song"
+            app:layout_constraintHorizontal_bias="0.551"
+            app:layout_constraintStart_toEndOf="@+id/last_song"
+            app:layout_constraintTop_toBottomOf="@+id/sb"
+            app:layout_constraintVertical_bias="1.0"
+            app:srcCompat="@drawable/ic_play_arrow_black_24dp" />
+
+        <ImageView
+            android:id="@+id/iv_cover"
+            android:layout_width="250dp"
+            android:layout_height="250dp"
+            android:layout_marginBottom="100dp"
+            app:layout_constraintBottom_toTopOf="@+id/sb"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:progressEmptyColor="#20FFFFFF"
-            app:progressLoadedColor="#00815E"
-            app:textColor="#80F78F"
-            app:textSize="14sp"
-            tools:ignore="MissingConstraints" />
+            app:srcCompat="@drawable/album1" />
 
         <ImageView
             android:id="@+id/last_song"
             android:layout_width="50dp"
             android:layout_height="50dp"
-            android:layout_marginStart="32dp"
-            android:layout_marginEnd="24dp"
+            android:layout_marginStart="80dp"
             android:layout_marginBottom="124dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toStartOf="@+id/next_song"
-            app:layout_constraintStart_toEndOf="@+id/speed_down"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
             app:srcCompat="@drawable/exo_icon_previous" />
 
         <ImageView
             android:id="@+id/next_song"
             android:layout_width="50dp"
             android:layout_height="50dp"
-            android:layout_marginStart="24dp"
-            android:layout_marginEnd="32dp"
-            android:layout_marginBottom="124dp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toStartOf="@+id/speed_up"
-            app:layout_constraintStart_toEndOf="@+id/last_song"
-            app:srcCompat="@drawable/exo_controls_next" />
-
-        <ImageView
-            android:id="@+id/speed_down"
-            android:layout_width="50dp"
-            android:layout_height="50dp"
-            android:layout_marginStart="40dp"
-            android:layout_marginBottom="124dp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:srcCompat="@drawable/exo_controls_rewind" />
-
-        <ImageView
-            android:id="@+id/speed_up"
-            android:layout_width="50dp"
-            android:layout_height="50dp"
-            android:layout_marginEnd="40dp"
+            android:layout_marginEnd="80dp"
             android:layout_marginBottom="124dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:srcCompat="@drawable/exo_notification_fastforward" />
+            app:srcCompat="@drawable/exo_controls_next" />
+
+        <SeekBar
+            android:id="@+id/sb"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+
+            app:layout_constraintBottom_toTopOf="@+id/next_song"
+            app:layout_constraintEnd_toEndOf="@+id/iv_cover"
+            app:layout_constraintStart_toStartOf="@+id/iv_cover" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -88,7 +106,7 @@
         app:layout_constraintTop_toTopOf="parent">
 
         <TextView
-            android:id="@+id/textView14"
+            android:id="@+id/auther"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="8dp"
@@ -96,7 +114,7 @@
             android:textColor="#FBF7F7"
             android:textSize="12sp"
             app:layout_constraintStart_toEndOf="@+id/back_play"
-            app:layout_constraintTop_toBottomOf="@+id/textView" />
+            app:layout_constraintTop_toBottomOf="@+id/songname" />
 
         <ImageView
             android:id="@+id/back_play"
@@ -109,7 +127,7 @@
             app:srcCompat="@drawable/ic_arrow_back_black_24dp" />
 
         <TextView
-            android:id="@+id/textView"
+            android:id="@+id/songname"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="8dp"
