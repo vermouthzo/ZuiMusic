@@ -18,8 +18,6 @@ import androidx.recyclerview.widget.RecyclerView;
 public class MainActivity extends AppCompatActivity implements View.OnClickListener{
 
     ImageView lastIv,playIv,nextIv,iconIv,songList1,songList2,songList3,songList4,songList5,songList6;
-
-
     TextView singerIv,titleIv;
     RecyclerView musicRv;
 
@@ -40,7 +38,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         initView();
-        //Datas = new ArrayList<>()
     }
 
     private void initView() {

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<androidx.cardview.widget.CardView xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:layout_marginRight="10dp"
@@ -8,44 +8,39 @@
     android:layout_marginTop="10dp"
     app:contentPadding="10dp"
     app:cardCornerRadius="10dp"
+    app:cardElevation="1dp"
     app:cardBackgroundColor="@color/colorPink">
-
-<RelativeLayout
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content">
-
-</RelativeLayout>
-
-    <TextView
-        android:id="@+id/item_local_music_num"
+    <RelativeLayout
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="1"
-        android:layout_centerVertical="true"
-        android:textSize="24sp"
-        android:textStyle="bold"/>
-    <TextView
-        android:id="@+id/item_local_music_song"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text=""
-        android:textSize="18sp"
-        android:textStyle="bold"
-        android:layout_toRightOf="@+id/item_local_music_num"
-        android:singleLine="true"
-        android:layout_marginLeft="20dp" />
+        android:layout_height="match_parent">
 
-    <TextView
-        android:id="@+id/item_local_music_singer"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text=""
-        android:layout_below="@+id/item_local_music_song"
-        android:layout_alignLeft="@+id/item_local_music_song"
-        android:layout_marginTop="25dp"
-        android:layout_marginLeft="20dp"
-        android:textSize="14sp"
-        android:textColor="#888"/>
+        <TextView
+            android:id="@+id/item_local_music_num"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:text="1"
+            android:textSize="24sp"
+            android:textStyle="bold"/>
 
+        <TextView
+            android:id="@+id/item_local_music_song"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="40dp"
+            android:singleLine="true"
+            android:text="History"
+            android:textSize="18sp"
+            android:textStyle="bold" />
 
+        <TextView
+            android:id="@+id/item_local_music_singer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="歌手一"
+            android:layout_below="@+id/item_local_music_song"
+            android:layout_alignLeft="@+id/item_local_music_song"
+            android:layout_marginTop="10dp"
+
+            />
+    </RelativeLayout>
 </androidx.cardview.widget.CardView>

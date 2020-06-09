@@ -15,6 +15,16 @@ public class LocalMusicAdapter extends RecyclerView.Adapter<LocalMusicAdapter.Lo
     Context context;
     List<LocalMusicBean>mDatas;
 
+    OnItemClickListener onItemClickListener;
+
+    public void setOnItemClickListener(OnItemClickListener onItemClickListener) {
+        this.onItemClickListener = onItemClickListener;
+    }
+
+    public interface OnItemClickListener{
+        public void OnItemClick(View view,int position);
+    }
+
     public LocalMusicAdapter(Context context, List<LocalMusicBean> mDatas) {
         this.context = context;
         this.mDatas = mDatas;
@@ -29,11 +39,18 @@ public class LocalMusicAdapter extends RecyclerView.Adapter<LocalMusicAdapter.Lo
     }
 
     @Override
-    public void onBindViewHolder(@NonNull LocalMusicViewHolder holder, int position) {
+    public void onBindViewHolder(@NonNull LocalMusicViewHolder holder, final int position) {
          LocalMusicBean musicBean = mDatas.get(position);
          holder.idTv.setText(musicBean.getId());
          holder.singerTv.setText(musicBean.getSinger());
          holder.songTv.setText(musicBean.getSong());
+
+         holder.itemView.setOnClickListener(new View.OnClickListener() {
+             @Override
+             public void onClick(View view) {
+                 onItemClickListener.OnItemClick(view,position);
+             }
+         });
     }
 
     @Override
