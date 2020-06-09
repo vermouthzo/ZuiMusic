@@ -30,13 +30,13 @@
         android:layout_marginTop="10dp"
         android:layout_marginLeft="10dp"
         android:textStyle="bold"
-        android:textSize="16sp"/>
+        android:textSize="12sp"/>
     <TextView
         android:id="@+id/localmusic_bottom_singer"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text=""
-        android:textSize="12sp"
+        android:textSize="10sp"
         android:layout_below="@+id/localmusic_bottom_song"
         android:layout_alignLeft="@+id/localmusic_bottom_song"
         android:layout_marginTop="10dp"/>

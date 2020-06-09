@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -64,303 +65,101 @@
             </androidx.constraintlayout.widget.ConstraintLayout>
 
             <androidx.constraintlayout.widget.ConstraintLayout
-                android:id="@+id/main_list"
+                android:id="@+id/music_choose"
                 android:layout_width="match_parent"
-                android:layout_height="387dp">
+                android:layout_height="417dp">
 
-                <TextView
-                    android:id="@+id/oftenList"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="8dp"
-                    android:layout_marginTop="10dp"
-                    android:text="常用歌单"
-                    android:textSize="18sp"
+                <Button
+                    android:id="@+id/InternetList"
+                    android:layout_width="402dp"
+                    android:layout_height="133dp"
+                    android:layout_marginTop="224dp"
+                    android:text="网络歌单"
+                    android:textSize="50dp"
                     app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintHorizontal_bias="0.047"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent" />
 
-                <ImageView
-                    android:id="@+id/songList1"
-                    android:layout_width="115dp"
-                    android:layout_height="115dp"
-                    android:layout_marginStart="16dp"
+                <Button
+                    android:id="@+id/LocalList"
+                    android:layout_width="402dp"
+                    android:layout_height="133dp"
                     android:layout_marginTop="40dp"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent"
-                    app:srcCompat="@drawable/album1" />
-
-                <ImageView
-                    android:id="@+id/songList2"
-                    android:layout_width="115dp"
-                    android:layout_height="115dp"
-                    android:layout_marginStart="10dp"
-                    android:layout_marginTop="40dp"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toEndOf="@+id/songList3"
-                    app:layout_constraintTop_toTopOf="parent"
-                    app:srcCompat="@drawable/album2" />
-
-                <ImageView
-                    android:id="@+id/songList3"
-                    android:layout_width="115dp"
-                    android:layout_height="115dp"
-                    android:layout_marginStart="16dp"
-                    android:layout_marginTop="40dp"
-                    app:layout_constraintStart_toEndOf="@+id/songList1"
-                    app:layout_constraintTop_toTopOf="parent"
-                    app:srcCompat="@drawable/album3" />
-
-                <TextView
-                    android:id="@+id/textView2"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="44dp"
-                    android:layout_marginTop="12dp"
-                    android:text="歌单1"
-                    app:layout_constraintEnd_toEndOf="@+id/imageView5"
-                    app:layout_constraintStart_toStartOf="@+id/songList1"
-                    app:layout_constraintTop_toBottomOf="@+id/songList1" />
-
-                <TextView
-                    android:id="@+id/list2"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="12dp"
-                    android:text="歌单2"
-                    app:layout_constraintEnd_toEndOf="@+id/songList3"
-                    app:layout_constraintStart_toStartOf="@+id/songList3"
-                    app:layout_constraintTop_toBottomOf="@+id/songList3" />
-
-                <TextView
-                    android:id="@+id/list3"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="12dp"
-                    android:text="歌单3"
-                    app:layout_constraintEnd_toEndOf="@+id/songList2"
-                    app:layout_constraintStart_toStartOf="@+id/songList2"
-                    app:layout_constraintTop_toBottomOf="@+id/songList2" />
-
-                <ImageView
-                    android:id="@+id/songList4"
-                    android:layout_width="115dp"
-                    android:layout_height="115dp"
-                    android:layout_marginTop="24dp"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toEndOf="@+id/songList5"
-                    app:layout_constraintTop_toBottomOf="@+id/list3"
-                    app:srcCompat="@drawable/album4" />
-
-                <ImageView
-                    android:id="@+id/songList6"
-                    android:layout_width="115dp"
-                    android:layout_height="115dp"
-                    android:layout_marginStart="16dp"
-                    android:layout_marginTop="24dp"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/textView2"
-                    app:srcCompat="@drawable/album5" />
-
-                <ImageView
-                    android:id="@+id/songList5"
-                    android:layout_width="115dp"
-                    android:layout_height="115dp"
-                    android:layout_marginStart="16dp"
-                    android:layout_marginTop="24dp"
-                    app:layout_constraintStart_toEndOf="@+id/songList6"
-                    app:layout_constraintTop_toBottomOf="@+id/list2"
-                    app:srcCompat="@drawable/album6" />
-
-                <TextView
-                    android:id="@+id/list4"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="12dp"
-                    android:text="歌单4"
-                    app:layout_constraintEnd_toEndOf="@+id/songList5"
-                    app:layout_constraintHorizontal_bias="0.556"
-                    app:layout_constraintStart_toStartOf="@+id/songList5"
-                    app:layout_constraintTop_toBottomOf="@+id/songList5" />
-
-                <TextView
-                    android:id="@+id/list5"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="12dp"
-                    android:text="歌单5"
-                    app:layout_constraintEnd_toEndOf="@+id/songList6"
-                    app:layout_constraintHorizontal_bias="0.493"
-                    app:layout_constraintStart_toStartOf="@+id/songList6"
-                    app:layout_constraintTop_toBottomOf="@+id/songList6" />
-
-                <TextView
-                    android:id="@+id/list6"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="12dp"
-                    android:text="歌单6"
-                    app:layout_constraintEnd_toEndOf="@+id/songList4"
-                    app:layout_constraintStart_toStartOf="@+id/songList4"
-                    app:layout_constraintTop_toBottomOf="@+id/songList4" />
-
-            </androidx.constraintlayout.widget.ConstraintLayout>
-
-            <androidx.constraintlayout.widget.ConstraintLayout
-                android:id="@+id/main_often"
-                android:layout_width="match_parent"
-                android:layout_height="200dp">
-
-                <androidx.constraintlayout.widget.ConstraintLayout
-                    android:layout_width="417dp"
-                    android:layout_height="200dp"
-                    android:layout_marginTop="50dp"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent">
-
-                    <TextView
-                        android:id="@+id/recent_singer"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginStart="40dp"
-                        android:layout_marginTop="12dp"
-                        android:text="演唱者1"
-                        android:textSize="16sp"
-                        app:layout_constraintStart_toEndOf="@+id/recent_icon"
-                        app:layout_constraintTop_toBottomOf="@+id/recent_title" />
-
-                    <ImageView
-                        android:id="@+id/recent_play"
-                        android:layout_width="50dp"
-                        android:layout_height="50dp"
-                        android:layout_marginTop="34dp"
-                        android:layout_marginEnd="55dp"
-                        android:layout_marginBottom="116dp"
-                        android:background="#003687"
-                        app:layout_constraintBottom_toBottomOf="parent"
-                        app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintTop_toTopOf="parent"
-                        app:srcCompat="@android:drawable/ic_media_play" />
-
-                    <ImageView
-                        android:id="@+id/recent_icon"
-                        android:layout_width="115dp"
-                        android:layout_height="115dp"
-                        android:layout_marginStart="26dp"
-                        android:layout_marginTop="13dp"
-                        android:layout_marginBottom="72dp"
-                        app:layout_constraintBottom_toBottomOf="parent"
-                        app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toTopOf="parent"
-                        app:srcCompat="@drawable/album7" />
-
-                    <TextView
-                        android:id="@+id/recent_title"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginStart="36dp"
-                        android:layout_marginTop="32dp"
-                        android:text="歌名1"
-                        android:textSize="24sp"
-                        app:layout_constraintStart_toEndOf="@+id/recent_icon"
-                        app:layout_constraintTop_toTopOf="parent" />
-                </androidx.constraintlayout.widget.ConstraintLayout>
-
-                <TextView
-                    android:id="@+id/recent"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="16dp"
-                    android:layout_marginTop="16dp"
                     android:background="#FFFFFF"
-                    android:text="最近播放"
-                    android:textSize="18sp"
+                    android:text="本地歌单"
+                    android:textSize="50dp"
+                    app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent" />
-
             </androidx.constraintlayout.widget.ConstraintLayout>
 
         </LinearLayout>
     </ScrollView>
 
-    <androidx.constraintlayout.widget.ConstraintLayout
-        android:id="@+id/music_bottom_fav"
+    <RelativeLayout
+        android:id="@+id/localmusic_bottom"
         android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:background="#F3DEBF"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent">
+        android:layout_height="70dp"
+        android:layout_alignParentBottom="true"
+        android:background="#EEEEEE"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+
+        <ImageView
+            android:id="@+id/localmusic_bottom_icon"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            app:srcCompat="@drawable/album8" />
 
         <TextView
-            android:id="@+id/music_bottom_iv_title"
+            android:id="@+id/localmusic_bottom_song"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="20dp"
-            android:layout_marginBottom="20dp"
-            android:text="History"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintStart_toEndOf="@+id/music_bottom_iv_icon"
-            app:layout_constraintTop_toTopOf="parent" />
-
-        <ImageView
-            android:id="@+id/music_bottom_iv_last"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
             android:layout_marginTop="10dp"
-            android:layout_marginEnd="17dp"
-            android:layout_marginBottom="10dp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toStartOf="@+id/music_bottom_iv_play"
-            app:layout_constraintTop_toTopOf="parent"
-            app:srcCompat="@android:drawable/ic_media_previous" />
+            android:layout_toRightOf="@id/localmusic_bottom_icon"
+            android:text=""
+            android:textSize="16sp"
+            android:textStyle="bold" />
 
-        <ImageView
-            android:id="@+id/music_bottom_iv_next"
+        <TextView
+            android:id="@+id/localmusic_bottom_singer"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="14dp"
-            android:layout_marginTop="8dp"
-            android:layout_marginEnd="14dp"
-            android:layout_marginBottom="10dp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toEndOf="@+id/music_bottom_iv_play"
-            app:layout_constraintTop_toTopOf="parent"
+            android:layout_below="@+id/localmusic_bottom_song"
+            android:layout_alignLeft="@+id/localmusic_bottom_song"
+            android:layout_marginTop="10dp"
+            android:text=""
+            android:textSize="12sp" />
+
+        <ImageView
+            android:id="@+id/local_music_next"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="20dp"
             app:srcCompat="@android:drawable/ic_media_next" />
 
         <ImageView
-            android:id="@+id/music_bottom_iv_play"
+            android:id="@+id/local_music_play"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginEnd="60dp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:srcCompat="@android:drawable/ic_media_play" />
-
-        <TextView
-            android:id="@+id/music_bottom_iv_singer"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="20dp"
-            android:text="88rising/Rich Brian"
-            app:layout_constraintStart_toEndOf="@+id/music_bottom_iv_icon"
-            app:layout_constraintTop_toBottomOf="@+id/music_bottom_iv_title" />
+            android:layout_centerVertical="true"
+            android:layout_marginRight="20dp"
+            android:layout_toLeftOf="@id/local_music_next"
+            app:srcCompat="@drawable/exo_controls_play" />
 
         <ImageView
-            android:id="@+id/music_bottom_iv_icon"
-            android:layout_width="45dp"
-            android:layout_height="45dp"
-            android:layout_marginStart="25dp"
-            android:layout_marginTop="5dp"
-            android:layout_marginBottom="5dp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:srcCompat="@drawable/album8" />
+            android:id="@+id/local_music_last"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="20dp"
+            android:layout_toLeftOf="@id/local_music_play"
+            app:srcCompat="@drawable/exo_controls_previous" />
 
-    </androidx.constraintlayout.widget.ConstraintLayout>
+    </RelativeLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
