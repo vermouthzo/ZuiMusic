@@ -1,4 +1,4 @@
-package com.HATFmusic;
+package com.HATFmusic.activity;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
@@ -17,6 +17,11 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 
+import com.HATFmusic.Comment;
+import com.HATFmusic.R;
+import com.HATFmusic.Song;
+import com.HATFmusic.SongLab;
+
 import java.io.Serializable;
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
@@ -28,6 +33,7 @@ public class CommentActivity extends AppCompatActivity {
     private ConstraintLayout back;
     private List<Comment> hotComments;
     private Song currentSong;
+    private TextView songname, auther;
     private final DateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
     private Button sendButton;
     private SongLab lab = SongLab.getInstance();
@@ -63,24 +69,12 @@ public class CommentActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_comment);
-        back_play = findViewById(R.id.back_play);
-        back = findViewById(R.id.back);
 
-        back_play.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Toast.makeText(CommentActivity.this, "", Toast.LENGTH_LONG)
-                        .show();
-                Intent intent = new Intent(CommentActivity.this, PlayActivity.class);
-                CommentActivity.this.startActivity(intent);
-            }
-        });
+        back = findViewById(R.id.back);
 
         back.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(CommentActivity.this, "", Toast.LENGTH_LONG)
-                        .show();
                 Intent intent = new Intent(CommentActivity.this, PlayActivity.class);
                 CommentActivity.this.startActivity(intent);
             }
@@ -111,6 +105,11 @@ public class CommentActivity extends AppCompatActivity {
     }
 
     private void updateUI() {
+        songname = findViewById(R.id.songname);
+        auther = findViewById(R.id.auther);
+        songname.setText(currentSong.getSongname());
+        auther.setText(currentSong.getAuther());
+
         //显示热门评论
         if (hotComments != null && hotComments.size() > 0) {
             Comment c1 = hotComments.get(0);

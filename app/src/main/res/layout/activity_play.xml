@@ -19,25 +19,25 @@
             android:id="@+id/tv_total"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="100dp"
             android:text="04:50"
             android:textColor="#fff"
             android:textSize="20sp"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toEndOf="@+id/sb"
-            app:layout_constraintTop_toBottomOf="@+id/iv_cover" />
+            app:layout_constraintTop_toTopOf="@+id/sb" />
 
         <TextView
             android:id="@+id/tv_progress"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="100dp"
             android:text="00:00"
             android:textColor="#fff"
             android:textSize="20sp"
             app:layout_constraintEnd_toStartOf="@+id/sb"
+            app:layout_constraintHorizontal_bias="1.0"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/iv_cover" />
+            app:layout_constraintTop_toTopOf="@+id/sb" />
 
         <ImageView
             android:id="@+id/btn_play"
@@ -57,10 +57,11 @@
             android:id="@+id/iv_cover"
             android:layout_width="250dp"
             android:layout_height="250dp"
-            android:layout_marginBottom="100dp"
-            app:layout_constraintBottom_toTopOf="@+id/sb"
+            android:layout_marginTop="128dp"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.509"
             app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
             app:srcCompat="@drawable/album1" />
 
         <ImageView
@@ -87,56 +88,70 @@
 
         <SeekBar
             android:id="@+id/sb"
-            android:layout_width="300dp"
-            android:layout_height="wrap_content"
+            android:layout_width="260dp"
+            android:layout_height="26dp"
             android:layout_margin="5dp"
 
-            app:layout_constraintBottom_toTopOf="@+id/next_song"
+            app:layout_constraintBottom_toBottomOf="@+id/iv_cover"
             app:layout_constraintEnd_toEndOf="@+id/iv_cover"
-            app:layout_constraintStart_toStartOf="@+id/iv_cover" />
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="@+id/iv_cover"
+            app:layout_constraintTop_toBottomOf="@+id/view2"
+            app:layout_constraintVertical_bias="0.253" />
 
-    </androidx.constraintlayout.widget.ConstraintLayout>
-
-    <androidx.constraintlayout.widget.ConstraintLayout
-        android:id="@+id/constraintLayout"
-        android:layout_width="412dp"
-        android:layout_height="50dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
-
-        <TextView
-            android:id="@+id/auther"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="8dp"
-            android:text="TextView"
-            android:textColor="#FBF7F7"
-            android:textSize="12sp"
-            app:layout_constraintStart_toEndOf="@+id/back_play"
-            app:layout_constraintTop_toBottomOf="@+id/songname" />
-
-        <ImageView
-            android:id="@+id/back_play"
-            android:layout_width="40dp"
-            android:layout_height="40dp"
-            android:layout_marginStart="8dp"
-            app:layout_constraintBottom_toBottomOf="parent"
+        <View
+            android:id="@+id/view2"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginTop="108dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:srcCompat="@drawable/ic_arrow_back_black_24dp" />
+            app:layout_constraintTop_toBottomOf="@+id/iv_cover" />
+
+        <View
+            android:id="@+id/view3"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginBottom="24dp"
+            app:layout_constraintBottom_toTopOf="@+id/btn_play"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="parent" />
 
         <TextView
             android:id="@+id/songname"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="8dp"
-            android:layout_marginTop="4dp"
+            android:layout_marginTop="32dp"
             android:text="歌曲名"
             android:textColor="#FDFCFC"
-            android:textSize="18sp"
-            app:layout_constraintStart_toEndOf="@+id/back_play"
+            android:textSize="30sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/auther"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="TextView"
+            android:textColor="#FBF7F7"
+            android:textSize="14sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/songname" />
+
+        <ImageView
+            android:id="@+id/comment"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="84dp"
+            android:layout_marginBottom="56dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:srcCompat="@drawable/ic_mode_comment_black_24dp" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 

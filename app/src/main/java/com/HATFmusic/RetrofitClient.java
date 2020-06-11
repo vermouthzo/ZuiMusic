@@ -1,5 +1,6 @@
 package com.HATFmusic;
 
+import com.HATFmusic.adapter.MyDateAdapter;
 import com.squareup.moshi.Moshi;
 
 import retrofit2.Retrofit;

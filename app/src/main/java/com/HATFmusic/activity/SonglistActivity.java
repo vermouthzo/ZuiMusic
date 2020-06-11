@@ -1,4 +1,4 @@
-package com.HATFmusic;
+package com.HATFmusic.activity;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
@@ -9,6 +9,11 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
+
+import com.HATFmusic.R;
+import com.HATFmusic.Song;
+import com.HATFmusic.SongLab;
+import com.HATFmusic.adapter.SongRvAdapter;
 
 public class SonglistActivity extends AppCompatActivity {
     private RecyclerView songRv;
@@ -33,10 +38,10 @@ public class SonglistActivity extends AppCompatActivity {
         rvAdapter = new SongRvAdapter(this, p -> {
             //跳转到新界面，使用意图Intent
             Intent intent = new Intent(SonglistActivity.this, PlayActivity.class);
-
             //通过位置p得到当前歌曲song
             Song c = lab.getSong(p);
             intent.putExtra("song", c);
+
             startActivity(intent);
         });
         this.songRv.setAdapter(rvAdapter);

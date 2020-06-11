@@ -1,7 +1,6 @@
-package com.HATFmusic;
+package com.HATFmusic.adapter;
 
 import android.content.Context;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -11,25 +10,28 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.HATFmusic.R;
+import com.HATFmusic.Song;
+import com.HATFmusic.SongLab;
 import com.bumptech.glide.Glide;
 import com.bumptech.glide.load.resource.bitmap.RoundedCorners;
 import com.bumptech.glide.request.RequestOptions;
 
 
-public class SongRvAdapter extends RecyclerView.Adapter<SongRvAdapter.SongRowHolder>{
+public class PlayRvAdapter extends RecyclerView.Adapter<PlayRvAdapter.SongRowHolder>{
 
     private SongLab lab = SongLab.getInstance();
     private SongClickListener listener;
     private Context context;
 
-    public SongRvAdapter(Context context, SongClickListener lis) {
+    public PlayRvAdapter(Context context, SongClickListener lis) {
         this.listener = lis;
         this.context = context;
     }
 
     @NonNull
     @Override
-    public SongRvAdapter.SongRowHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+    public PlayRvAdapter.SongRowHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         View rowView = LayoutInflater
                 .from(parent.getContext())
                 .inflate(R.layout.song_row, parent, false);
@@ -81,7 +83,6 @@ public class SongRvAdapter extends RecyclerView.Adapter<SongRvAdapter.SongRowHol
                 @Override
                 public void onClick(View v) {
                     int position = SongRowHolder.this.getLayoutPosition();
-                    Log.d("zui", position + 1 + "行被点击啦！");
                     //调用时机的跳转代码
                     listener.onSongClick(position);
                 }

@@ -3,21 +3,15 @@ package com.HATFmusic;
 import android.app.Service;
 import android.content.Context;
 import android.content.Intent;
+import android.media.AudioManager;
 import android.media.MediaPlayer;
-import android.net.Uri;
 import android.os.Binder;
 import android.os.Bundle;
 import android.os.IBinder;
 import android.os.Message;
 
-import androidx.constraintlayout.widget.ConstraintLayout;
+import com.HATFmusic.activity.PlayActivity;
 
-import com.google.android.exoplayer2.source.MediaSource;
-import com.google.android.exoplayer2.source.hls.HlsMediaSource;
-import com.google.android.exoplayer2.upstream.DataSource;
-import com.google.android.exoplayer2.upstream.DefaultDataSourceFactory;
-
-import java.nio.file.Path;
 import java.util.Timer;
 import java.util.TimerTask;
 
@@ -72,12 +66,21 @@ public class PlayService extends Service {
 
     //自定义一个Binder类
     class MusicControl extends Binder{
+
         public void play(){
             try{
                 player.reset();  //重置音乐播放器
-                Uri uri = Uri
-                        .parse(currentSong.getPath());
-               // player = MediaPlayer.create(this, uri);
+                //Uri uri = Uri.parse(currentSong.getPath());
+                player.setDataSource("http://120.24.109.59:8080/song1.com");
+                player.setAudioStreamType(AudioManager.STREAM_MUSIC);
+                player.prepareAsync();
+                player.setOnPreparedListener(new MediaPlayer.OnPreparedListener() {
+                       @Override
+                       public void onPrepared(MediaPlayer mp) {
+                           // 装载完毕回调
+                          player.start();
+                         }
+                       });
                 player.start();  //播放音乐
                 addTimer();      //添加计时器
             }catch (Exception ex){
