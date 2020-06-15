@@ -1,4 +1,4 @@
-package com.HATFmusic.musicplayer;
+package com.musicplayer.HATFmusic;
 
 import retrofit2.Call;
 import retrofit2.http.Body;

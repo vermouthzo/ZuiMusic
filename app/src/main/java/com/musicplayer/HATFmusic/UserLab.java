@@ -1,4 +1,4 @@
-package com.HATFmusic.musicplayer;
+package com.musicplayer.HATFmusic;
 
 import android.os.Handler;
 import android.os.Message;

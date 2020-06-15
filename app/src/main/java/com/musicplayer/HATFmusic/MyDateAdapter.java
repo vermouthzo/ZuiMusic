@@ -1,4 +1,4 @@
-package com.HATFmusic.musicplayer;
+package com.musicplayer.HATFmusic;
 
 import com.squareup.moshi.FromJson;
 import com.squareup.moshi.ToJson;

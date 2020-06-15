@@ -1,4 +1,4 @@
-package com.HATFmusic.musicplayer;
+package com.musicplayer.HATFmusic;
 
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
